@@ -5,12 +5,8 @@
   "Nationality": "Filipino",
   "Religion": "Agnostic",
   "Profile": "Motivated recent college graduate aspiring to become a computer engineer. Looking for a company where I can use my educational background to develop and hone my skills.",
-  "ContactInfo": [
-    {
-      "ContactNumber": 9956783420,
-      "EmailAddress": "yuangab10@gmail.com"
-    }
-  ],
+  "ContactNumber": 9956783420,
+  "EmailAddress": "yuangab10@gmail.com",
   "QualitiesaAndSkills": [
     {
       "Skills": [

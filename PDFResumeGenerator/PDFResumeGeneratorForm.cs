@@ -20,16 +20,11 @@ namespace PDFResumeGenerator
             public string Nationality { get; set; }
             public string Religion { get; set; }
             public string Profile { get; set; }
-            public List<ContactInformation> ContactInfo { get; set; }
+            public long ContactNumber { get; set; }
+            public string EmailAddress { get; set; }
             public List<SkillsAndQualities> QualitiesaAndSkills { get; set; }
             public List<School> EducationalAttainment { get; set; }
             public List<InternshipExperience> Internship{ get; set; }
-
-        }
-        class ContactInformation
-        {
-            public long ContactNumber { get; set; }
-            public string EmailAddress { get; set; }
 
         }
         class SkillsAndQualities
@@ -61,15 +56,8 @@ namespace PDFResumeGenerator
                 Nationality = "Filipino",
                 Religion = "Agnostic",
                 Profile = "Motivated recent college graduate aspiring to become a computer engineer. Looking for a company where I can use my educational background to develop and hone my skills.",
-                ContactInfo = new List<ContactInformation>
-                {
-                    new ContactInformation()
-
-                    {
-                        ContactNumber = 09956783420,
-                        EmailAddress = "yuangab10@gmail.com"
-                    }
-                },
+                ContactNumber = 09956783420,
+                EmailAddress = "yuangab10@gmail.com",
                 QualitiesaAndSkills = new List<SkillsAndQualities>
                 {
                     new SkillsAndQualities()
@@ -152,7 +140,15 @@ namespace PDFResumeGenerator
             ResumePDF.Open();
             ResumePDF.Add(new Paragraph("Personal Information"));
             ResumePDF.Add(new Paragraph("Name: " + InformationThatWillBePlacedOnTheResume.Name));
-            ResumePDF.Close();
+            ResumePDF.Add(new Paragraph("Age: " + InformationThatWillBePlacedOnTheResume.Age + " years old"));
+            ResumePDF.Add(new Paragraph("Address: " + InformationThatWillBePlacedOnTheResume.Address));
+            ResumePDF.Add(new Paragraph("Nationality: " + InformationThatWillBePlacedOnTheResume.Name));
+            ResumePDF.Add(new Paragraph("Religion: " + InformationThatWillBePlacedOnTheResume.Religion));
+            ResumePDF.Add(new Paragraph("Profile: " + InformationThatWillBePlacedOnTheResume.Profile));
+            ResumePDF.Add(new Paragraph("Contact Information"));
+            ResumePDF.Add(new Paragraph("Contact Number: " + InformationThatWillBePlacedOnTheResume.ContactNumber));
+            ResumePDF.Add(new Paragraph("Email Address: " + InformationThatWillBePlacedOnTheResume.EmailAddress));
+            ResumePDF.Add(new Paragraph("Skills: "));
         }
 
         private void BtnReadJSONFile_Click(object sender, EventArgs e)
