@@ -8,23 +8,40 @@ namespace PDFResumeGenerator
         }
         class PersonalInformation
         {
-            public string Name;
-            public int Age;
-            public string Address;
-            public string Nationality;
-            public string Religion;
-            public string AboutMyself;
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public string Address { get; set; }
+            public string Nationality { get; set; }
+            public string Religion { get; set; }
+            public string Profile { get; set; } 
         }
         class ContactInformation
         {
-            public long ContactNumber;
-            public string EmailAddress;
+            public long ContactNumber { get; set; }
+            public string EmailAddress { get; set; }
 
         }
         class SkillsAndQualities
         {   
-            public List<string> Skills;
-            public List<string> Qualities;
+            public List<string> Skills { get; set; }
+            public List<string> Qualities { get; set; }
+        }
+        class Education
+        {
+            public List<School> SchoolsAttended { get; set; }
+        }
+        class  School
+        {
+            public string SchoolName { get; set; }
+            public string YearAttended { get; set; }
+            public List<string> Achievements { get; set; }
+        }
+        class InternshipExperience
+        {
+            public string Company { get; set; }
+            public string Duration { get; set; }
+            public string Job { get; set; }
+            public List<string> Experience { get; set; }
         }
         private void PDFResumeGeneratorForm_Load(object sender, EventArgs e)
         {
@@ -36,11 +53,11 @@ namespace PDFResumeGenerator
             PersonalInformation PersonalInfo = new PersonalInformation()
             {
                 Name = "Yuan Gabriel S. Lacambra",
-                Age = 19,
+                Age = 21,
                 Address = "#3 Cojuangco St., Everhills Subdivision, Brgy. Inarawan, Antipolo City, Rizal",
                 Nationality = "Filipino",
                 Religion = "Agnostic",
-                AboutMyself = "Motivated college graduate aspiring to become a computer engineer. Looking for a company that will let me prove my skills."
+                Profile = "Motivated recent college graduate aspiring to become a computer engineer. Looking for a company where I can use my educational background to develop and hone my skills."
             };
             ContactInformation ConatctInfo = new ContactInformation()
             {
@@ -55,7 +72,10 @@ namespace PDFResumeGenerator
                     "Edge Computing",
                     "Computational Algorithms",
                     "Operating Systems",
-                    "Adept at 3 Programming Languages (C#, C++, Python)",
+                    "Thorough understanding of the.NET technology and developing Java apps.",
+                    "Strong programming and analytical abilities",
+                    "Strong familiarity with database management systems including Oracle, MS Access, and MySQL.",
+                    "Well-Versed at 3 Programming Languages (C#, C++, Python)",
                 },
                 Qualities = new List<string>()
                 {
@@ -66,6 +86,46 @@ namespace PDFResumeGenerator
                     "Logical and analytical thinker. Incredibly adept at solving problems",
                     "Amiable and gets along with everyone",
                     "Diligent and highly persistent"
+                }
+            };
+            Education EducationAttained = new Education()
+            {
+                SchoolsAttended = new List<School>
+                {
+                    new School
+                    {
+                        SchoolName = "Fuschia High School",
+                        YearAttended = "2013-2019",
+                        Achievements = new List<string>()
+                        {
+                            "Graduated Salutatorian",
+                            "District-Level Quizbee Winner"
+                        }
+                    },
+                    new School
+                    {
+                        SchoolName = "Alfaroa College",
+                        YearAttended = "2019-2023",
+                        Achievements = new List<string>()
+                        {
+                            "Graduated Cum Laude",
+                            "President's Lister"
+                        }
+                    }
+                }
+            };
+            InternshipExperience Internship = new InternshipExperience()
+            {
+                Company = "JAVA Systems Philippiones",
+                Duration = "2021-2023",
+                Job = "Computer Engineering",
+                Experience = new List<string>()
+
+                {
+                    "Helped with project testing, evaluation, debugging, and documentation.",
+                    "Implemented and troubleshot the wireless and LAN Network.",
+                    "Created and tested operating systems and firmware.",
+                    "Participated in code and design reviews."
                 }
             };
         }
