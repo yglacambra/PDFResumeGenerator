@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Stefani\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj": {}
+    "C:\\Users\\Nikki\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Stefani\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj": {
+    "C:\\Users\\Nikki\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stefani\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj",
+        "projectUniqueName": "C:\\Users\\Nikki\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj",
         "projectName": "PDFResumeGenerator",
-        "projectPath": "C:\\Users\\Stefani\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj",
-        "packagesPath": "C:\\Users\\Stefani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stefani\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\obj\\",
+        "projectPath": "C:\\Users\\Nikki\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj",
+        "packagesPath": "C:\\Users\\Nikki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nikki\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Stefani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nikki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -47,6 +47,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [
@@ -67,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

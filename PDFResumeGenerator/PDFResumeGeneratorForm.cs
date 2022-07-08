@@ -1,6 +1,5 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-
 namespace PDFResumeGenerator
 {
     public partial class PDFResumeGeneratorForm : Form
@@ -139,15 +138,15 @@ namespace PDFResumeGenerator
                 }
                            
             };
-            string ResumeInfos = JsonConvert.SerializeObject(ResumeInformation, Formatting.Indented);
+            string ResumeInfos = JsonConvert.SerializeObject(ResumeInformation);
             File.WriteAllText(@"Resume Information.json", ResumeInfos);
         }
 
         private void BtnReadJSONFile_Click(object sender, EventArgs e)
         {
             string JSONFileInfo = File.ReadAllText(@"Resume Information.json");
-            RichTxtBoxJSONFile.Text = JSONFileInfo;
-            ResumeInfo InfomrationThatWillBePlacedOnTheResume = JsonConvert.DeserializeObject<ResumeInfo>(JSONFileInfo);
+            ResumeInfo InformationThatWillBePlacedOnTheResume = JsonConvert.DeserializeObject<ResumeInfo>(JSONFileInfo);
+            RichTxtBoxJSONFile.Text = InformationThatWillBePlacedOnTheResume.ToString();
         }
     }
 }
