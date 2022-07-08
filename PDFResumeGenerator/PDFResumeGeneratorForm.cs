@@ -135,12 +135,19 @@ namespace PDFResumeGenerator
                             "Created and tested operating systems and firmware.",
                             "Participated in code and design reviews."
                         }
-
                     }
                 }
+                           
             };
+            string ResumeInfos = JsonConvert.SerializeObject(ResumeInformation, Formatting.Indented);
+            File.WriteAllText(@"Resume Information.json", ResumeInfos);
         }
 
-      
+        private void BtnReadJSONFile_Click(object sender, EventArgs e)
+        {
+            string JSONFileInfo = File.ReadAllText(@"Resume Information.json");
+            RichTxtBoxJSONFile.Text = JSONFileInfo;
+            ResumeInfo InfomrationThatWillBePlacedOnTheResume = JsonConvert.DeserializeObject<ResumeInfo>(JSONFileInfo);
+        }
     }
 }

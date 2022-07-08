@@ -43,6 +43,7 @@
             this.BtnReadJSONFile.TabIndex = 0;
             this.BtnReadJSONFile.Text = "Read JSON File";
             this.BtnReadJSONFile.UseVisualStyleBackColor = true;
+            this.BtnReadJSONFile.Click += new System.EventHandler(this.BtnReadJSONFile_Click);
             // 
             // RichTxtBoxJSONFile
             // 
