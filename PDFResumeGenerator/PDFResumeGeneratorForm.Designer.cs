@@ -37,7 +37,7 @@
             // BtnReadJSONFile
             // 
             this.BtnReadJSONFile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnReadJSONFile.Location = new System.Drawing.Point(29, 36);
+            this.BtnReadJSONFile.Location = new System.Drawing.Point(21, 19);
             this.BtnReadJSONFile.Name = "BtnReadJSONFile";
             this.BtnReadJSONFile.Size = new System.Drawing.Size(142, 29);
             this.BtnReadJSONFile.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // RichTxtBoxJSONFile
             // 
-            this.RichTxtBoxJSONFile.Location = new System.Drawing.Point(29, 71);
+            this.RichTxtBoxJSONFile.Location = new System.Drawing.Point(21, 54);
             this.RichTxtBoxJSONFile.Name = "RichTxtBoxJSONFile";
             this.RichTxtBoxJSONFile.Size = new System.Drawing.Size(502, 247);
             this.RichTxtBoxJSONFile.TabIndex = 2;
@@ -55,7 +55,7 @@
             // BtnGenerateResume
             // 
             this.BtnGenerateResume.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnGenerateResume.Location = new System.Drawing.Point(29, 324);
+            this.BtnGenerateResume.Location = new System.Drawing.Point(21, 307);
             this.BtnGenerateResume.Name = "BtnGenerateResume";
             this.BtnGenerateResume.Size = new System.Drawing.Size(159, 29);
             this.BtnGenerateResume.TabIndex = 3;
@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 450);
+            this.ClientSize = new System.Drawing.Size(546, 363);
             this.Controls.Add(this.BtnGenerateResume);
             this.Controls.Add(this.RichTxtBoxJSONFile);
             this.Controls.Add(this.BtnReadJSONFile);
