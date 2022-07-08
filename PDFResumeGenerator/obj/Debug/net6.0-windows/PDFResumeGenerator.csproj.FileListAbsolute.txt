@@ -1,0 +1,17 @@
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\bin\Debug\net6.0-windows\PDFResumeGenerator.exe
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\bin\Debug\net6.0-windows\PDFResumeGenerator.deps.json
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\bin\Debug\net6.0-windows\PDFResumeGenerator.runtimeconfig.json
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\bin\Debug\net6.0-windows\PDFResumeGenerator.dll
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\bin\Debug\net6.0-windows\PDFResumeGenerator.pdb
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.csproj.AssemblyReference.cache
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.PDFResumeGeneratorForm.resources
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.csproj.GenerateResource.cache
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.AssemblyInfoInputs.cache
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.AssemblyInfo.cs
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.dll
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\refint\PDFResumeGenerator.dll
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.pdb
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\PDFResumeGenerator.genruntimeconfig.cache
+C:\Users\Stefani\source\repos\PDFResumeGenerator\PDFResumeGenerator\obj\Debug\net6.0-windows\ref\PDFResumeGenerator.dll
