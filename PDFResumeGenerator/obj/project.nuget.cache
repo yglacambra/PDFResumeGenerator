@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Psn+jfe/amCgf5xQ7M/3U2JHBM6UEXpOK3n9rojbhVjkUC3C200UsMeukjI38vRcEN6C3KvJeg54wy6HAp3eNQ==",
+  "dgSpecHash": "uGCE+AnUA+jsd/Fqg80ZXKWs7oPF8kKJ/4XnO/TS9bUkQVmbSNRoUMm5XOrR2BDRvQHKgiVnHB+i7SENEzvRjA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stefani\\source\\repos\\PDFResumeGenerator\\PDFResumeGenerator\\PDFResumeGenerator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Stefani\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
