@@ -1,1 +1,68 @@
-{"Name":"Yuan Gabriel S. Lacambra","Age":21,"Address":"#3 Cojuangco St., Everhills Subdivision, Brgy. Inarawan, Antipolo City, Rizal","Nationality":"Filipino","Religion":"Agnostic","Profile":"Motivated recent college graduate aspiring to become a computer engineer. Looking for a company where I can use my educational background to develop and hone my skills.","ContactInfo":[{"ContactNumber":9956783420,"EmailAddress":"yuangab10@gmail.com"}],"QualitiesaAndSkills":[{"Skills":["Artificial Intelligence and Machine Learning","Edge Computing","Computational Algorithms","Operating Systems","Thorough understanding of the.NET technology and developing Java apps.","Strong programming and analytical abilities","Strong familiarity with database management systems including Oracle, MS Access, and MySQL.","Well-Versed at 3 Programming Languages (C#, C++, Python)"],"Qualities":["Meticulous and Organized","Fast Learner. Can learn new technologies and skills quickly.","High technical competence","Highly dependable and adaptable","Logical and analytical thinker. Incredibly adept at solving problems","Amiable and gets along with everyone","Diligent and highly persistent"]}],"EducationalAttainment":[{"SchoolName":"Fuschia High School","YearAttended":"2013-2019","Achievements":["Graduated Salutatorian","District-Level Quizbee Winner"]},{"SchoolName":"Alfaroa College","YearAttended":"2019-2023","Achievements":["Graduated Cum Laude","President's Lister"]}],"Internship":[{"Company":"JAVA Systems Philippiones","Duration":"2021-2023","Job":"Computer Engineering","Experience":["Helped with project testing, evaluation, debugging, and documentation.","Implemented and troubleshot the wireless and LAN Network.","Created and tested operating systems and firmware.","Participated in code and design reviews."]}]}
+{
+  "Name": "Yuan Gabriel S. Lacambra",
+  "Age": 21,
+  "Address": "#3 Cojuangco St., Everhills Subdivision, Brgy. Inarawan, Antipolo City, Rizal",
+  "Nationality": "Filipino",
+  "Religion": "Agnostic",
+  "Profile": "Motivated recent college graduate aspiring to become a computer engineer. Looking for a company where I can use my educational background to develop and hone my skills.",
+  "ContactInfo": [
+    {
+      "ContactNumber": 9956783420,
+      "EmailAddress": "yuangab10@gmail.com"
+    }
+  ],
+  "QualitiesaAndSkills": [
+    {
+      "Skills": [
+        "Artificial Intelligence and Machine Learning",
+        "Edge Computing",
+        "Computational Algorithms",
+        "Operating Systems",
+        "Thorough understanding of the.NET technology and developing Java apps.",
+        "Strong programming and analytical abilities",
+        "Strong familiarity with database management systems including Oracle, MS Access, and MySQL.",
+        "Well-Versed at 3 Programming Languages (C#, C++, Python)"
+      ],
+      "Qualities": [
+        "Meticulous and Organized",
+        "Fast Learner. Can learn new technologies and skills quickly.",
+        "High technical competence",
+        "Highly dependable and adaptable",
+        "Logical and analytical thinker. Incredibly adept at solving problems",
+        "Amiable and gets along with everyone",
+        "Diligent and highly persistent"
+      ]
+    }
+  ],
+  "EducationalAttainment": [
+    {
+      "SchoolName": "Fuschia High School",
+      "YearAttended": "2013-2019",
+      "Achievements": [
+        "Graduated Salutatorian",
+        "District-Level Quizbee Winner"
+      ]
+    },
+    {
+      "SchoolName": "Alfaroa College",
+      "YearAttended": "2019-2023",
+      "Achievements": [
+        "Graduated Cum Laude",
+        "President's Lister"
+      ]
+    }
+  ],
+  "Internship": [
+    {
+      "Company": "JAVA Systems Philippiones",
+      "Duration": "2021-2023",
+      "Job": "Computer Engineering",
+      "Experience": [
+        "Helped with project testing, evaluation, debugging, and documentation.",
+        "Implemented and troubleshot the wireless and LAN Network.",
+        "Created and tested operating systems and firmware.",
+        "Participated in code and design reviews."
+      ]
+    }
+  ]
+}

@@ -50,10 +50,7 @@ namespace PDFResumeGenerator
             public string Job { get; set; }
             public List<string> Experience { get; set; }
         }
-      
-           
-        
-    
+
         private void PDFResumeGeneratorForm_Load(object sender, EventArgs e)
         {
             ResumeInfo ResumeInformation = new ResumeInfo()
@@ -153,8 +150,15 @@ namespace PDFResumeGenerator
             Document ResumePDF = new Document(PageSize.A4);
             PdfWriter ResumePDFWriter = PdfWriter.GetInstance(ResumePDF, new FileStream("LACAMBRA_YUAN.pdf", FileMode.Create));
             ResumePDF.Open();
+            ResumePDF.Add(new Paragraph("Personal Information"));
             ResumePDF.Add(new Paragraph("Name: " + InformationThatWillBePlacedOnTheResume.Name));
             ResumePDF.Close();
+        }
+
+        private void BtnReadJSONFile_Click(object sender, EventArgs e)
+        {
+            string JSONFileInfo = File.ReadAllText(@"Resume Information.json");
+            RichTxtBoxJSONFile.Text = JSONFileInfo;
         }
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDFResumeGeneratorForm));
             this.RichTxtBoxJSONFile = new System.Windows.Forms.RichTextBox();
             this.BtnGenerateResume = new System.Windows.Forms.Button();
+            this.BtnReadJSONFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RichTxtBoxJSONFile
@@ -54,11 +55,24 @@
             this.BtnGenerateResume.UseVisualStyleBackColor = true;
             this.BtnGenerateResume.Click += new System.EventHandler(this.BtnGenerateResume_Click);
             // 
+            // BtnReadJSONFile
+            // 
+            this.BtnReadJSONFile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnReadJSONFile.Location = new System.Drawing.Point(24, 25);
+            this.BtnReadJSONFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnReadJSONFile.Name = "BtnReadJSONFile";
+            this.BtnReadJSONFile.Size = new System.Drawing.Size(199, 39);
+            this.BtnReadJSONFile.TabIndex = 4;
+            this.BtnReadJSONFile.Text = "Read JSON File";
+            this.BtnReadJSONFile.UseVisualStyleBackColor = true;
+            this.BtnReadJSONFile.Click += new System.EventHandler(this.BtnReadJSONFile_Click);
+            // 
             // PDFResumeGeneratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 484);
+            this.Controls.Add(this.BtnReadJSONFile);
             this.Controls.Add(this.BtnGenerateResume);
             this.Controls.Add(this.RichTxtBoxJSONFile);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -74,5 +88,6 @@
         #endregion
         private RichTextBox RichTxtBoxJSONFile;
         private Button BtnGenerateResume;
+        private Button BtnReadJSONFile;
     }
 }
