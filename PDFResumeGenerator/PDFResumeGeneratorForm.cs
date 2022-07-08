@@ -1,5 +1,9 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 namespace PDFResumeGenerator
 {
     public partial class PDFResumeGeneratorForm : Form
@@ -138,15 +142,19 @@ namespace PDFResumeGenerator
                 }
                            
             };
-            string ResumeInfos = JsonConvert.SerializeObject(ResumeInformation);
+            string ResumeInfos = JsonConvert.SerializeObject(ResumeInformation, Formatting.Indented);
             File.WriteAllText(@"Resume Information.json", ResumeInfos);
         }
 
-        private void BtnReadJSONFile_Click(object sender, EventArgs e)
+        private void BtnGenerateResume_Click(object sender, EventArgs e)
         {
             string JSONFileInfo = File.ReadAllText(@"Resume Information.json");
             ResumeInfo InformationThatWillBePlacedOnTheResume = JsonConvert.DeserializeObject<ResumeInfo>(JSONFileInfo);
-            RichTxtBoxJSONFile.Text = InformationThatWillBePlacedOnTheResume.ToString();
+            Document ResumePDF = new Document(PageSize.A4);
+            PdfWriter ResumePDFWriter = PdfWriter.GetInstance(ResumePDF, new FileStream("LACAMBRA_YUAN.pdf", FileMode.Create));
+            ResumePDF.Open();
+            ResumePDF.Add(new Paragraph("Name: " + InformationThatWillBePlacedOnTheResume.Name));
+            ResumePDF.Close();
         }
     }
 }
