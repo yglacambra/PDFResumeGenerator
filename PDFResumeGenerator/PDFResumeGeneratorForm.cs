@@ -324,5 +324,16 @@ namespace PDFResumeGenerator
             }
             PDFResumeReader.Close();
         }
+
+        private void BtnConfirm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            File.Delete(@"LACAMBRA_YUAN.pdf");
+            this.Close();
+        }
     }
 }
