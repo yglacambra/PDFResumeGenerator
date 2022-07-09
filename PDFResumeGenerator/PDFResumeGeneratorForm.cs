@@ -132,6 +132,11 @@ namespace PDFResumeGenerator
         }
 
         private void BtnGenerateResume_Click(object sender, EventArgs e)
+        { 
+            WritePDFResume();
+        }
+
+        private void WritePDFResume()
         {
             string JSONFileInfo = File.ReadAllText(@"Resume Information.json");
             ResumeInfo InformationThatWillBePlacedOnTheResume = JsonConvert.DeserializeObject<ResumeInfo>(JSONFileInfo);
@@ -148,9 +153,42 @@ namespace PDFResumeGenerator
             ResumePDF.Add(new Paragraph("Contact Information"));
             ResumePDF.Add(new Paragraph("Contact Number: " + InformationThatWillBePlacedOnTheResume.ContactNumber));
             ResumePDF.Add(new Paragraph("Email Address: " + InformationThatWillBePlacedOnTheResume.EmailAddress));
-            ResumePDF.Add(new Paragraph("Skills: "));
+            ResumePDF.Add(new Paragraph("Skills:"));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[0]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[1]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[2]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[3]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[4]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[5]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[6]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[7]));
+            ResumePDF.Add(new Paragraph("Qualities:"));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[0]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[1]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[2]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[3]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[4]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[5]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[6]));
+            ResumePDF.Add(new Paragraph("Education"));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].SchoolName));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].YearAttended));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].Achievements[0]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].Achievements[1]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].SchoolName));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].YearAttended));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].Achievements[0]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].Achievements[1]));
+            ResumePDF.Add(new Paragraph("Internship Experience"));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Company));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Duration));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Job));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[0]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[1]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[2]));
+            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[3]));
+            ResumePDF.Close();
         }
-
         private void BtnReadJSONFile_Click(object sender, EventArgs e)
         {
             string JSONFileInfo = File.ReadAllText(@"Resume Information.json");
