@@ -26,11 +26,11 @@ namespace PDFResumeGenerator
             public string EmailAddress { get; set; }
             public List<SkillsAndQualities> QualitiesaAndSkills { get; set; }
             public List<School> EducationalAttainment { get; set; }
-            public List<InternshipExperience> Internship{ get; set; }
+            public List<InternshipExperience> Internship { get; set; }
 
         }
         class SkillsAndQualities
-        {   
+        {
             public List<string> Skills { get; set; }
             public List<string> Qualities { get; set; }
         }
@@ -97,7 +97,6 @@ namespace PDFResumeGenerator
                         Achievements = new List<string>()
                         {
                             "Graduated Salutatorian",
-                            "District-Level Quizbee Winner"
                         }
                     },
                     new School()
@@ -127,14 +126,14 @@ namespace PDFResumeGenerator
                         }
                     }
                 }
-                           
+
             };
             string ResumeInfos = JsonConvert.SerializeObject(ResumeInformation, Formatting.Indented);
             File.WriteAllText(@"Resume Information.json", ResumeInfos);
         }
 
         private void BtnGenerateResume_Click(object sender, EventArgs e)
-        { 
+        {
             WritePDFResume();
         }
 
@@ -146,19 +145,72 @@ namespace PDFResumeGenerator
             PdfWriter ResumePDFWriter = PdfWriter.GetInstance(ResumePDF, new FileStream("LACAMBRA_YUAN.pdf", FileMode.Create));
             var TextBaseFont = FontFactory.GetFont("Arial", 14.0f, BaseColor.BLACK);
             var HighlightTextFont = FontFactory.GetFont("Arial", 14.0f, 1);
-            var TitleFont = FontFactory.GetFont("Franklin Gothic Heavy", 22.0f,1);
+            var TitleFont = FontFactory.GetFont("Franklin Gothic", 20.0f, 1);
             ResumePDF.Open();
-            ResumePDF.Add(new Paragraph("Personal Information", TitleFont));   
-            ResumePDF.Add(new Paragraph("Name: " + InformationThatWillBePlacedOnTheResume.Name, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Age: " + InformationThatWillBePlacedOnTheResume.Age + " years old", TextBaseFont));
-            ResumePDF.Add(new Paragraph("Address: " + InformationThatWillBePlacedOnTheResume.Address, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Nationality: " + InformationThatWillBePlacedOnTheResume.Name, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Religion: " + InformationThatWillBePlacedOnTheResume.Religion, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Profile: " + InformationThatWillBePlacedOnTheResume.Profile, TextBaseFont));
+            ResumePDF.Add(new Paragraph("Personal Information", TitleFont));
+            //Adding the Name
+            Chunk NameChunkLeft = new Chunk("Name: ", HighlightTextFont);
+            Chunk NameChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.Name, TextBaseFont);
+            Phrase NamePhrase = new Phrase();
+            NamePhrase.Add(NameChunkLeft);
+            NamePhrase.Add(NameChunkRight);
+            ResumePDF.Add(new Paragraph(NamePhrase));
+            //Adding the Age
+            Chunk AgeChunkLeft = new Chunk("Age: ", HighlightTextFont);
+            Chunk AgeChunkMiddle = new Chunk(InformationThatWillBePlacedOnTheResume.Age.ToString(), TextBaseFont);
+            Chunk AgeChunkRight = new Chunk(" years old", TextBaseFont);
+            Phrase AgePhrase = new Phrase();
+            AgePhrase.Add(AgeChunkLeft);
+            AgePhrase.Add(AgeChunkMiddle);
+            AgePhrase.Add(AgeChunkRight);
+            ResumePDF.Add(new Paragraph(AgePhrase));
+            //Adding the Address
+            Chunk AddressChunkLeft = new Chunk("Address: ", HighlightTextFont);
+            Chunk AddressChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.Address, TextBaseFont);
+            Phrase AddressPhrase = new Phrase();
+            AddressPhrase.Add(AddressChunkLeft);
+            AddressPhrase.Add(AddressChunkRight);
+            ResumePDF.Add(new Paragraph(AddressPhrase));
+            //Adding the Nationality
+            Chunk NationalityChunkLeft = new Chunk("Nationality: ", HighlightTextFont);
+            Chunk NationalityChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.Nationality, TextBaseFont);
+            Phrase NationalityPhrase = new Phrase();
+            NationalityPhrase.Add(NationalityChunkLeft);
+            NationalityPhrase.Add(NationalityChunkRight);
+            ResumePDF.Add(new Paragraph(NationalityPhrase));
+            //Adding the Religion
+            Chunk ReligionChunkLeft = new Chunk("Religion: ", HighlightTextFont);
+            Chunk ReligionChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.Religion, TextBaseFont);
+            Phrase ReligionPhrase = new Phrase();
+            ReligionPhrase.Add(ReligionChunkLeft);
+            ReligionPhrase.Add(ReligionChunkRight);
+            ResumePDF.Add(new Paragraph(ReligionPhrase));
+            //Adding the Profile
+            Chunk ProfileChunkLeft = new Chunk("Profile: ", HighlightTextFont);
+            Chunk ProfileChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.Profile, TextBaseFont);
+            Phrase ProfilePhrase = new Phrase();
+            ProfilePhrase.Add(ProfileChunkLeft);
+            ProfilePhrase.Add(ProfileChunkRight);
+            ResumePDF.Add(new Paragraph(ProfilePhrase));
+            //Adding the Contact Info
             ResumePDF.Add(new Paragraph("Contact Information", TitleFont));
-            ResumePDF.Add(new Paragraph("Contact Number: " + InformationThatWillBePlacedOnTheResume.ContactNumber, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Email Address: " + InformationThatWillBePlacedOnTheResume.EmailAddress, TextBaseFont));
+            //Adding the Contact Number
+            Chunk ContactNumberChunkLeft = new Chunk("Contact Number: ", HighlightTextFont);
+            Chunk ContactNumberChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.ContactNumber.ToString(), TextBaseFont);
+            Phrase ContactNumberPhrase = new Phrase();
+            ContactNumberPhrase.Add(ContactNumberChunkLeft);
+            ContactNumberPhrase.Add(ContactNumberChunkRight);
+            ResumePDF.Add(new Paragraph(ContactNumberPhrase));
+            //Adding the Email Address
+            Chunk EmailAddressChunkLeft = new Chunk("Email Address: ", HighlightTextFont);
+            Chunk EmailAddressChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.EmailAddress, TextBaseFont);
+            Phrase EmailAddressPhrase = new Phrase();
+            EmailAddressPhrase.Add(EmailAddressChunkLeft);
+            EmailAddressPhrase.Add(EmailAddressChunkRight);
+            ResumePDF.Add(new Paragraph(EmailAddressPhrase));
+            //Adding the Skills and Qualities
             ResumePDF.Add(new Paragraph("Skills and Qualities", TitleFont));
+            //Adding the Skills
             ResumePDF.Add(new Paragraph("Skills:", HighlightTextFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[0], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[1], TextBaseFont));
@@ -168,6 +220,7 @@ namespace PDFResumeGenerator
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[5], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[6], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Skills[7], TextBaseFont));
+            //Adding the Qualities
             ResumePDF.Add(new Paragraph("Qualities:", HighlightTextFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[0], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[1], TextBaseFont));
@@ -176,18 +229,35 @@ namespace PDFResumeGenerator
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[4], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[5], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.QualitiesaAndSkills[0].Qualities[6], TextBaseFont));
+            //Adding the Education
             ResumePDF.Add(new Paragraph("Education", TitleFont));
+            //Adding the HighSchool
             ResumePDF.Add(new Paragraph("High School", HighlightTextFont));
-            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].SchoolName, TextBaseFont));
-            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].YearAttended, TextBaseFont));
+            //Adding the High School Name
+            Chunk HighSchoolNameChunkLeft = new Chunk("School: ", HighlightTextFont);
+            Chunk HighSchoolNameChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].SchoolName, TextBaseFont);
+            Phrase HighSchoolNamePhrase = new Phrase();
+            HighSchoolNamePhrase.Add(HighSchoolNameChunkLeft);
+            HighSchoolNamePhrase.Add(HighSchoolNameChunkRight);
+            ResumePDF.Add(new Paragraph(HighSchoolNamePhrase));
+            //Adding the Year Attended (High School)
+            Chunk YearAttendedHighSchoolChunkLeft = new Chunk("Year Attended: ", HighlightTextFont);
+            Chunk YearAttendedHighSchoolChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].YearAttended, TextBaseFont);
+            Phrase YearAttendedHighSchoolPhrase = new Phrase();
+            YearAttendedHighSchoolPhrase.Add(YearAttendedHighSchoolChunkLeft);
+            YearAttendedHighSchoolPhrase.Add(YearAttendedHighSchoolChunkRight);
+            ResumePDF.Add(new Paragraph(YearAttendedHighSchoolPhrase));
+            //Adding High School Achievements
+            ResumePDF.Add(new Paragraph("Achievements", HighlightTextFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].Achievements[0], TextBaseFont));
-            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].Achievements[1], TextBaseFont));
+            //Adding the College
             ResumePDF.Add(new Paragraph("College", HighlightTextFont));
-            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].SchoolName, TextBaseFont));
-            ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].YearAttended, TextBaseFont));
+            ResumePDF.Add(new Paragraph("School: " + InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].SchoolName, TextBaseFont));
+            ResumePDF.Add(new Paragraph("Year Attended: " + InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].YearAttended, TextBaseFont));
+            ResumePDF.Add(new Paragraph("Achievements", HighlightTextFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].Achievements[0], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].Achievements[1], TextBaseFont));
-            ResumePDF.Add(new Paragraph("Internship Experience",TitleFont));
+            ResumePDF.Add(new Paragraph("Internship Experience", TitleFont));
             ResumePDF.Add(new Paragraph("Company: " + InformationThatWillBePlacedOnTheResume.Internship[0].Company, TextBaseFont));
             ResumePDF.Add(new Paragraph("Duration: " + InformationThatWillBePlacedOnTheResume.Internship[0].Duration, TextBaseFont));
             ResumePDF.Add(new Paragraph("Job: " + InformationThatWillBePlacedOnTheResume.Internship[0].Job, TextBaseFont));
