@@ -240,7 +240,7 @@ namespace PDFResumeGenerator
             HighSchoolNamePhrase.Add(HighSchoolNameChunkLeft);
             HighSchoolNamePhrase.Add(HighSchoolNameChunkRight);
             ResumePDF.Add(new Paragraph(HighSchoolNamePhrase));
-            //Adding the Year Attended (High School)
+            //Adding Year Attended (High School)
             Chunk YearAttendedHighSchoolChunkLeft = new Chunk("Year Attended: ", HighlightTextFont);
             Chunk YearAttendedHighSchoolChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].YearAttended, TextBaseFont);
             Phrase YearAttendedHighSchoolPhrase = new Phrase();
@@ -248,30 +248,58 @@ namespace PDFResumeGenerator
             YearAttendedHighSchoolPhrase.Add(YearAttendedHighSchoolChunkRight);
             ResumePDF.Add(new Paragraph(YearAttendedHighSchoolPhrase));
             //Adding High School Achievements
-            ResumePDF.Add(new Paragraph("Achievements", HighlightTextFont));
+            ResumePDF.Add(new Paragraph("Achievements:", HighlightTextFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[0].Achievements[0], TextBaseFont));
             //Adding the College
             ResumePDF.Add(new Paragraph("College", HighlightTextFont));
-            ResumePDF.Add(new Paragraph("School: " + InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].SchoolName, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Year Attended: " + InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].YearAttended, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Achievements", HighlightTextFont));
+            //Adding the College Name
+            Chunk CollegeNameChunkLeft = new Chunk("School: ", HighlightTextFont);
+            Chunk CollegeNameChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].SchoolName, TextBaseFont);
+            Phrase CollegeNamePhrase = new Phrase();
+            CollegeNamePhrase.Add(CollegeNameChunkLeft);
+            CollegeNamePhrase.Add(CollegeNameChunkRight);
+            ResumePDF.Add(new Paragraph(CollegeNamePhrase));
+            //Adding Year Attended (College)
+            Chunk YearAttendedCollegeChunkLeft = new Chunk("Year Attended: ", HighlightTextFont);
+            Chunk YearAttendedCollegeChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].YearAttended, TextBaseFont);
+            Phrase YearAttendedCollegePhrase = new Phrase();
+            YearAttendedCollegePhrase.Add(YearAttendedCollegeChunkLeft);
+            YearAttendedCollegePhrase.Add(YearAttendedCollegeChunkRight);
+            ResumePDF.Add(new Paragraph(YearAttendedCollegePhrase));
+            //Adding College Achievements
+            ResumePDF.Add(new Paragraph("Achievements:", HighlightTextFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].Achievements[0], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.EducationalAttainment[1].Achievements[1], TextBaseFont));
+            //Adding Internship Experience
             ResumePDF.Add(new Paragraph("Internship Experience", TitleFont));
-            ResumePDF.Add(new Paragraph("Company: " + InformationThatWillBePlacedOnTheResume.Internship[0].Company, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Duration: " + InformationThatWillBePlacedOnTheResume.Internship[0].Duration, TextBaseFont));
-            ResumePDF.Add(new Paragraph("Job: " + InformationThatWillBePlacedOnTheResume.Internship[0].Job, TextBaseFont));
+            //Adding Company Name
+            Chunk CompanyNameChunkLeft = new Chunk("Company: ", HighlightTextFont);
+            Chunk CompanyNameChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.Internship[0].Company, TextBaseFont);
+            Phrase CompanyNamePhrase = new Phrase();
+            CompanyNamePhrase.Add(CompanyNameChunkLeft);
+            CompanyNamePhrase.Add(CompanyNameChunkRight);
+            ResumePDF.Add(new Paragraph(CompanyNamePhrase));
+            //Adding Internship Duration
+            Chunk InternshipDurationChunkLeft = new Chunk("Duration: ", HighlightTextFont);
+            Chunk InternshipDurationChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.Internship[0].Duration, TextBaseFont);
+            Phrase InternshipDurationPhrase = new Phrase();
+            InternshipDurationPhrase.Add(InternshipDurationChunkLeft);
+            InternshipDurationPhrase.Add(InternshipDurationChunkRight);
+            ResumePDF.Add(new Paragraph(InternshipDurationPhrase));
+            //Adding Internship Job
+            Chunk InternshipJobChunkLeft = new Chunk("Job: ", HighlightTextFont);
+            Chunk InternshipJobChunkRight = new Chunk(InformationThatWillBePlacedOnTheResume.Internship[0].Job, TextBaseFont);
+            Phrase InternshipJobPhrase = new Phrase();
+            InternshipJobPhrase.Add(InternshipJobChunkLeft);
+            InternshipJobPhrase.Add(InternshipJobChunkRight);
+            ResumePDF.Add(new Paragraph(InternshipJobPhrase));
+            //Adding Internship Experience
             ResumePDF.Add(new Paragraph("Experience:", HighlightTextFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[0], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[1], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[2], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[3], TextBaseFont));
             ResumePDF.Close();
-        }
-        private void BtnReadJSONFile_Click(object sender, EventArgs e)
-        {
-            string JSONFileInfo = File.ReadAllText(@"Resume Information.json");
-            RichTxtBoxJSONFile.Text = JSONFileInfo;
         }
     }
 }
