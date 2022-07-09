@@ -37,7 +37,8 @@
             // 
             // RichTxtBoxJSONFile
             // 
-            this.RichTxtBoxJSONFile.Location = new System.Drawing.Point(24, 72);
+            this.RichTxtBoxJSONFile.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RichTxtBoxJSONFile.Location = new System.Drawing.Point(23, 32);
             this.RichTxtBoxJSONFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RichTxtBoxJSONFile.Name = "RichTxtBoxJSONFile";
             this.RichTxtBoxJSONFile.Size = new System.Drawing.Size(573, 328);
@@ -47,7 +48,7 @@
             // BtnGenerateResume
             // 
             this.BtnGenerateResume.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnGenerateResume.Location = new System.Drawing.Point(24, 409);
+            this.BtnGenerateResume.Location = new System.Drawing.Point(23, 369);
             this.BtnGenerateResume.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnGenerateResume.Name = "BtnGenerateResume";
             this.BtnGenerateResume.Size = new System.Drawing.Size(199, 39);
@@ -59,7 +60,7 @@
             // BtnConfirm
             // 
             this.BtnConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnConfirm.Location = new System.Drawing.Point(359, 409);
+            this.BtnConfirm.Location = new System.Drawing.Point(358, 369);
             this.BtnConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnConfirm.Name = "BtnConfirm";
             this.BtnConfirm.Size = new System.Drawing.Size(116, 39);
@@ -71,7 +72,7 @@
             // BtnCancel
             // 
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancel.Location = new System.Drawing.Point(481, 409);
+            this.BtnCancel.Location = new System.Drawing.Point(480, 369);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(116, 39);
@@ -84,7 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 484);
+            this.ClientSize = new System.Drawing.Size(624, 422);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnConfirm);
             this.Controls.Add(this.BtnGenerateResume);
