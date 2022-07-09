@@ -4,6 +4,8 @@ using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.fonts;
+using iTextSharp.text.pdf.parser;
+using System.IO;
 
 
 namespace PDFResumeGenerator
@@ -135,6 +137,7 @@ namespace PDFResumeGenerator
         private void BtnGenerateResume_Click(object sender, EventArgs e)
         {
             WritePDFResume();
+            ReadPDFResumeAndShowItOnTheRichTextBox();
         }
 
         private void WritePDFResume()
@@ -300,6 +303,18 @@ namespace PDFResumeGenerator
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[2], TextBaseFont));
             ResumePDF.Add(new Paragraph(InformationThatWillBePlacedOnTheResume.Internship[0].Experience[3], TextBaseFont));
             ResumePDF.Close();
+        }
+
+        private void ReadPDFResumeAndShowItOnTheRichTextBox()
+        {
+            PdfReader PDFResumeReader = new PdfReader(@"LACAMBRA_YUAN.pdf");
+            for (int Page = 1; Page <= PDFResumeReader.NumberOfPages; Page++)
+            {
+                ITextExtractionStrategy ITEStrategy = new SimpleTextExtractionStrategy();
+                string PDFResumeText = PdfTextExtractor.GetTextFromPage(PDFResumeReader, Page, ITEStrategy);
+                RichTxtBoxJSONFile.Text = PDFResumeText;
+            }
+            PDFResumeReader.Close();
         }
     }
 }
