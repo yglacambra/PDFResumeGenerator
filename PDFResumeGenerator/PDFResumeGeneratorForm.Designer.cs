@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDFResumeGeneratorForm));
             this.RichTxtBoxJSONFile = new System.Windows.Forms.RichTextBox();
             this.BtnGenerateResume = new System.Windows.Forms.Button();
+            this.BtnConfirm = new System.Windows.Forms.Button();
+            this.BtnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RichTxtBoxJSONFile
@@ -54,11 +56,35 @@
             this.BtnGenerateResume.UseVisualStyleBackColor = true;
             this.BtnGenerateResume.Click += new System.EventHandler(this.BtnGenerateResume_Click);
             // 
+            // BtnConfirm
+            // 
+            this.BtnConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnConfirm.Location = new System.Drawing.Point(359, 409);
+            this.BtnConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnConfirm.Name = "BtnConfirm";
+            this.BtnConfirm.Size = new System.Drawing.Size(116, 39);
+            this.BtnConfirm.TabIndex = 4;
+            this.BtnConfirm.Text = "Confirm";
+            this.BtnConfirm.UseVisualStyleBackColor = true;
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnCancel.Location = new System.Drawing.Point(481, 409);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(116, 39);
+            this.BtnCancel.TabIndex = 5;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = true;
+            // 
             // PDFResumeGeneratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 484);
+            this.Controls.Add(this.BtnCancel);
+            this.Controls.Add(this.BtnConfirm);
             this.Controls.Add(this.BtnGenerateResume);
             this.Controls.Add(this.RichTxtBoxJSONFile);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -75,5 +101,7 @@
         private RichTextBox RichTxtBoxJSONFile;
         private Button BtnGenerateResume;
         private Button BtnReadJSONFile;
+        private Button BtnConfirm;
+        private Button BtnCancel;
     }
 }

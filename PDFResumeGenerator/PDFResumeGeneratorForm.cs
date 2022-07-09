@@ -132,12 +132,20 @@ namespace PDFResumeGenerator
             };
             string ResumeInfos = JsonConvert.SerializeObject(ResumeInformation, Formatting.Indented);
             File.WriteAllText(@"Resume Information.json", ResumeInfos);
+            BtnCancel.Enabled = false;
+            BtnCancel.Visible = false;
+            BtnConfirm.Enabled = false;
+            BtnConfirm.Visible = false;
         }
 
         private void BtnGenerateResume_Click(object sender, EventArgs e)
         {
             WritePDFResume();
             ReadPDFResumeAndShowItOnTheRichTextBox();
+            BtnCancel.Enabled = true;
+            BtnCancel.Visible = true;
+            BtnConfirm.Enabled = true;
+            BtnConfirm.Visible = true;
         }
 
         private void WritePDFResume()
